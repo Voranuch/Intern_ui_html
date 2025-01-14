@@ -1,0 +1,93 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f8f8f8;
+    padding: 20px;
+    text-align: center;
+}
+
+.scan-barcode-section{
+    display: flex;
+    flex-direction: column;
+    padding-right: 20px;
+}
+
+.scan-barcode-inner{
+    display: flex;
+    flex-direction: column;
+    gap: 100px; /* ระยะห่างระหว่างแต่ละช่อง */
+    width: 200px; /* กำหนดขนาดความกว้าง */
+    margin: 0 auto; 
+}
+
+.headerr {
+    background-color: #6a1b9a; /* Vibrant purple header */
+    color: #ffffff;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    padding: 50px 20px;
+
+}
+
+.headerh1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.headerp {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+
+.features {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.feature {
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-button {
+    padding: 10px 20px;
+    background-color: #ffe100;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.action-button:hover {
+    background-color: #ff97e3;
+}
+
+
+footer {
+    background-color: #6a1b9a; /* Matching the header's vibrant purple */
+    color: #ffffff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+h1 {
+    color: #333;
+}
+
+form {
+    margin: 20px 0;
+}
+
+input, button {
+    margin: 5px;
+    padding: 10px;
+}

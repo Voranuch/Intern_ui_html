@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>HomePage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="headerr">
+        <h1 class="headerh1">Welcome to Our Services</h1>
+        <p class="headerp">Click to enter to the process.</p>
+        
+                <button class="action-button" ><a href="client.html">Client</a></button>
+                <button class="action-button" ><a href="c_ent.html">C_ent</a></button>
+                <button class="action-button" ><a href="hybrid.html">Hybrid</a></button>
+    </header>
+
+    <div class="scan-barcode-section">
+    <h1>Scan Your Barcode Here</h1>
+    <div class="scan-barcode-inner">
+        <form method="POST" action="/submit">
+            <label for="barcode">Enter Barcode:</label>
+            <input type="text" id="eiei_barcode" name="barcode" autofocus required>
+
+            <label for="barcode">Enter Barcode2:</label>
+            <input type="text" id="eiei2_barcode" name="barcode2" autofocus required>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+    <div id="result"></div>
+    <script src="styles.css"></script>
+    </div>
+
+    <footer>
+        <p>© 2023 My Simple Blog</p>
+    </footer>
+</body>
+</html>

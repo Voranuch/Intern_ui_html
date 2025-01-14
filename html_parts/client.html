@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scan Barcode here</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="client.html">Client</a></li>
+                <li><a href="c_ent.html">C_ent</a></li>
+                <li><a href="hybrid.html">Hybrid</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Scan Your Barcode</h1>
+    <form method="POST" action="/submit">
+        <label for="barcode">Enter Barcode:</label>
+        <input type="text" id="barcode" name="barcode" autofocus required>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="result"></div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
