@@ -118,15 +118,70 @@ a:hover {
 }
 
 .action-button:hover {
-    background-color: #ff97e3;
+    background-color: #e6b503;
+}
+
+.label-selector{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.carton-label-selector {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    width: calc((100% / 3) - 40px); /* Adjust for 3 products per row */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pallet-label-selector {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    width: calc((100% / 3) - 40px); /* Adjust for 3 products per row */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carton-label-selector:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+.pallet-label-selector:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.clicklabel{
+    background-color: #ffe100;
+    color: white;
+    font-weight: bold;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.clicklabel:hover{
+    background-color: #e6b503;
 }
 
 
 footer {
+    background-position: center;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
     background-color: #6a1b9a; /* Matching the header's vibrant purple */
     color: #ffffff;
     text-align: center;
-    padding: 1em 0;
+    padding: 5px 0;
 }
 
 h1 {

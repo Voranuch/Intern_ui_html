@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HybridPage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="site-identity">
+            <h1 style="color: #ffffff;">Hybrid</h1>
+        </div>
+        <nav class="site-navigation">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="client.html">Client</a></li>
+                    <li><a href="c_ent.html">C_ent</a></li>
+                </ul>
+        </nav>
+        
+    </header>
+
+    <div class="scan-barcode-section">
+        <h1>Scan Your Barcode Here</h1>
+        <div class="scan-barcode-inner">
+            <form method="POST" action="/submit">
+                <label for="barcode">Enter Barcode:</label>
+                <input type="text" id="eiei_barcode" name="barcode" autofocus required>
+    
+                <label for="barcode">Enter Barcode2:</label>
+                <input type="text" id="eiei2_barcode" name="barcode2" autofocus required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    <div id="result"></div>
+    <script src="/css_js/scripts.js"></script>
+</body>
+</html>

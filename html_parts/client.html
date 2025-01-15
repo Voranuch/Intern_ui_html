@@ -20,21 +20,26 @@
         </nav>
         
     </header>
-
-    <div class="scan-barcode-section">
-        <h1>Scan Your Barcode Here</h1>
-        <div class="scan-barcode-inner">
-            <form method="POST" action="/submit">
-                <label for="barcode">Enter Barcode:</label>
-                <input type="text" id="eiei_barcode" name="barcode" autofocus required>
-    
-                <label for="barcode">Enter Barcode2:</label>
-                <input type="text" id="eiei2_barcode" name="barcode2" autofocus required>
-    
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    <div id="result"></div>
-    <script src="/css_js/scripts.js"></script>
+    <main class="label-selector">
+    <section class="carton-label-selector" id="carton">
+         <!--<img src="https://i.imgur.com/LXwNDDd.jpg" width="100%" alt="Product 1">-->
+        <h2>Carton Label</h2>
+        <button class="clicklabel">
+            <a href="carton.html">click</a>
+        </button>
+    </section>
+    <section class="pallet-label-selector" id="pallet">
+        <!--<img src="https://i.imgur.com/LXwNDDd.jpg" width="100%" alt="Product 1">-->
+        <h2>Pallet Label</h2>
+        <button class="clicklabel">
+            <a href="index.html">
+                click
+            </a>
+        </button>
+    </section>
+    </main>
+    <footer>
+        <p>Western Digital Storage Technologies (Thailand) Ltd.</p>
+    </footer>
 </body>
 </html>
