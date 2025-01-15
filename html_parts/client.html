@@ -3,28 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scan Barcode here</title>
-    <link rel="stylesheet" href="/static/styles.css">
+    <title>ClientPage</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="client.html">Client</a></li>
-                <li><a href="c_ent.html">C_ent</a></li>
-                <li><a href="hybrid.html">Hybrid</a></li>
-            </ul>
+    <header class="site-header">
+        <div class="site-identity">
+            <h1 style="color: #ffffff;">Client</h1>
+        </div>
+        <nav class="site-navigation">
+                <ul class="nav">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="c_ent.html">C_ent</a></li>
+                    <li><a href="hybrid.html">Hybrid</a></li>
+                </ul>
         </nav>
+        
     </header>
 
-    <h1>Scan Your Barcode</h1>
-    <form method="POST" action="/submit">
-        <label for="barcode">Enter Barcode:</label>
-        <input type="text" id="barcode" name="barcode" autofocus required>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="scan-barcode-section">
+        <h1>Scan Your Barcode Here</h1>
+        <div class="scan-barcode-inner">
+            <form method="POST" action="/submit">
+                <label for="barcode">Enter Barcode:</label>
+                <input type="text" id="eiei_barcode" name="barcode" autofocus required>
+    
+                <label for="barcode">Enter Barcode2:</label>
+                <input type="text" id="eiei2_barcode" name="barcode2" autofocus required>
+    
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     <div id="result"></div>
-    <script src="/static/script.js"></script>
+    <script src="/css_js/scripts.js"></script>
 </body>
 </html>
