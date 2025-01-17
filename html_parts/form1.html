@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-container {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #000;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        .form-header {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        .dropdown, .type-input {
+            width: 90%;
+            padding: 5px;
+            margin-bottom: 5px;
+        }
+        .input-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .input-table th, .input-table td {
+            border: 1px solid #000;
+            padding: 5px;
+            text-align: left;
+        }
+        .input-table .non-editable {
+            background-color: #d3d3d3;
+            color: #555;
+            text-align: center;
+        }
+        .verify-section {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .verify-box button {
+            padding: 5px 10px;
+            margin: 5px;
+            border: none;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+        .verify-box button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <!-- Form 1 Content -->
+    <div class="form-container">
+        <div class="form-header">
+            <div>
+                <label for="location">Location</label>
+                <select id="location" class="dropdown">
+                    <option>BPI</option>
+                </select>
+            </div>
+            <div>
+                <label for="print-date">Print Date</label>
+                <input id="print-date" type="date" class="type-input">
+            </div>
+            <div>
+                <label for="type">Type of carton/pallet label</label>
+                <input id="type" class="type-input">
+            </div>
+        </div>
+        <div>
+            <label>Product</label>
+            <input id="product" type="text" class="type-input">
+        </div>
+        <div>
+            <label>Model</label>
+            <input id="model_num" type="text" class="type-input"  oninput="updateModelNumber()">
+        </div>
+        <table class="input-table">
+            <thead>
+                <tr>
+                    <th>Buy-off Items</th>
+                    <th>Master Info</th>
+                    <th>Input</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1. Model Number</td>
+                    <td></td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>2. Model HGST</td>
+                    <td>Master data here</td>
+                    <td class="non-editable">N/A</td>
+                    <td class="non-editable">N/A</td>
+                </tr>
+                <tr>
+                    <td>3. UPC code</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>4. CCC</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>5. Work Week</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>6. QA lot ID (Only L-W)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>7. Qty. / (Q)QTY</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>8. Package ID / BOX ID</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>9. Drive Serial Number: 1st of left hand-side</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>10. Drive Serial Number: 2nd of left hand-side</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>11. Drive Serial Number: 3rd of left hand-side(Only 2.5 product)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>12. Drive Serial Number: 4th of left hand-side(Only 2.5 product)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>13. Customer PN / CP PN / SAP PN / F/W PN / HPE P/N / HPE GP/N(Circle to select)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>14. RoHS</td>
+                    <td><select id="rohs" class="dropdown">
+                        <option>Yes</option>
+                        <option>No</option>
+                        </select>
+                    </td>
+                    
+                    <td><select id="rohs" class="dropdown">
+                        <option>Yes</option>
+                        <option>No</option>
+                        </select>
+                    </td>
+                    <td class="result-cell">-</td>
+                    </tr>
+                    
+                <tr>
+                    <td>15. QTY./COUNTRY CODE (20/TH)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>16. DATE OF MFG (only Dual brand, Hybrid)</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>17. ค่อยหาทำ</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>7. Qty. / (Q)QTY</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>18. Logo (Circle to select), If matching please write "OK"
+                        好望 SERIAL NUMBERS / Korea Other mark /
+                        2 arrow / WD logo</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>9. Drive Serial Number: 1st of left hand-side</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+                <tr>
+                    <td>10. Drive Serial Number: 2nd of left hand-side</td>
+                    <td>hoho</td>
+                    <td><input type="text" class="type-input input-field"></td>
+                    <td class="result-cell">-</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="verify-section">
+            <div class="verify-box">
+                <button onclick="verifyInputs()">Verify</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateModelNumber() {
+            const modelNumber = document.getElementById("model_num").value;
+            const table = document.querySelector('.input-table tbody');
+            /*const firstRowInput = table.querySelector('tr:nth-child(1) .input-field'); //พิมที่input พร้อมกันไปเลย
+            firstRowInput.value = modelNumber;
+            const resultCell = table.querySelector('tr:nth-child(1) .result-cell');
+            resultCell.innerText = "-";*/
+            const masterInfoCell = table.querySelector('tr:nth-child(1) td:nth-child(2)');
+            masterInfoCell.innerText = modelNumber;
+        }
+        function verifyInputs() {
+            
+            const table = document.querySelector('.input-table tbody');
+            const rows = table.querySelectorAll('tr');
+
+            rows.forEach((row, index) => {
+                if (index === 1) return; // Skip the non-editable row
+
+                const masterInfo = row.cells[1].innerText.trim();
+                const inputField = row.querySelector('.input-field');
+                const resultCell = row.querySelector('.result-cell');
+
+                if (inputField.value.trim() === masterInfo) {
+                    resultCell.innerText = 'Passed';
+                    resultCell.style.color = 'green';
+                } else {
+                    resultCell.innerText = 'Failed';
+                    resultCell.style.color = 'red';
+                }
+            });
+        }
+    </script>
+</body>
+</html>
